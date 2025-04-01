@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+</head>
+<body>
+    <div>
+        <!-- Header -->
+        <header>
+            <h1>Weather Forecast</h1>
+            <p>Get accurate weather information for any location</p>
+        </header>
+
+        <!-- Search Section -->
+        <div>
+            <div>
+                <div>
+                    <input type="text" id="search-input" placeholder="Enter city name...">
+                    <div id="search-dropdown">
+                        <!-- Dropdown items -->
+                    </div>
+                </div>
+                <button id="search-button">Search</button>
+                <button id="location-button">Current Location</button>
+            </div>
+            <div id="error-message"></div>
+        </div>
+
+        <!-- Current Weather -->
+        <div id="current-weather">
+            <div>
+                <div>
+                    <h2 id="city-name"></h2>
+                    <p id="current-date"></p>
+                    <div>
+                        <p id="weather-description"></p>
+                    </div>
+                </div>
+                <div>
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p></p>
+                </div>
+                <div>
+                    <p></p>
+                </div>
+                <div>
+                    <p ></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Extended Forecast -->
+        <div id="forecast-container" >
+            <h2 >5-Day Forecast</h2>
+            <div id="forecast">
+                <!-- Forecast item -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
