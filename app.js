@@ -1,7 +1,7 @@
 // npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
 
 // API configuration
-const API_KEY = '95b581b48d9ddad9e21c0fb3948f44e1'; // You'll need to get your own API key
+const API_KEY = 'Enter API key here'; // Get API key from OpenWeather. Haven't uploaded mine for security reasons.
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 // DOM Elements
