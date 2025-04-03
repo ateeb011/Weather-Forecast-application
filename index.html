@@ -4,156 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="https://kit.fontawesome.com/3b47871664.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div>
-        <!-- Header --><!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Weather Forecast App</title>
-        <link rel="stylesheet" href="output.css">
-        <script src="https://kit.fontawesome.com/3b47871664.js" crossorigin="anonymous"></script>
-    </head>
-    <body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen">
-        <div class="container mx-auto px-4 py-8 max-w-4xl">
-            <!-- Header -->
-            <header class="text-center mb-8">
-                <h1 class="text-3xl md:text-4xl font-bold text-blue-800">Weather Forecast</h1>
-                <p class="text-gray-600">Get accurate weather information for any location</p>
-            </header>
-    
-            <!-- Search Section -->
-            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
-                <div class="flex flex-col md:flex-row gap-4">
-                    <div class="relative flex-grow">
-                        <input 
-                            type="text" 
-                            id="search-input" 
-                            placeholder="Enter city name..." 
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        >
-                        <div id="search-dropdown" class="hidden absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-10 max-h-60 overflow-y-auto">
-                            <!-- Dropdown items will be populated here -->
-                        </div>
-                    </div>
-                    <button 
-                        id="search-button" 
-                        class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition duration-300"
-                    >
-                        Search
-                    </button>
-                    <button 
-                        id="location-button" 
-                        class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition duration-300"
-                    >
-                        <i class="fas fa-location-dot mr-2"></i>Current Location
-                    </button>
-                </div>
-                <div id="error-message" class="text-red-500 mt-2 hidden"></div>
-            </div>
-    
-            <!-- Current Weather -->
-            <div id="current-weather" class="bg-white rounded-lg shadow-lg p-6 mb-6 hidden">
-                <div class="flex flex-col md:flex-row items-center">
-                    <div class="flex-1">
-                        <h2 id="city-name" class="text-2xl font-semibold text-gray-800"></h2>
-                        <p id="current-date" class="text-gray-500"></p>
-                        <div class="mt-4">
-                            <div class="flex items-center">
-                                <span id="current-temp" class="text-5xl font-bold text-gray-800"></span>
-                                <span class="text-2xl text-gray-600 ml-2">°C</span>
-                            </div>
-                            <p id="weather-description" class="text-gray-600 mt-1 capitalize"></p>
-                        </div>
-                    </div>
-                    <div class="weather-icon text-center">
-                        <img id="weather-icon" src="" alt="Weather Icon" class="w-24 h-24">
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-                    <div class="bg-blue-50 p-3 rounded-lg">
-                        <p class="text-gray-500"><i class="fas fa-wind mr-2"></i>Wind</p>
-                        <p id="wind-speed" class="font-semibold"></p>
-                    </div>
-                    <div class="bg-blue-50 p-3 rounded-lg">
-                        <p class="text-gray-500"><i class="fas fa-droplet mr-2"></i>Humidity</p>
-                        <p id="humidity" class="font-semibold"></p>
-                    </div>
-                    <div class="bg-blue-50 p-3 rounded-lg">
-                        <p class="text-gray-500"><i class="fas fa-temperature-half mr-2"></i>Feels Like</p>
-                        <p id="feels-like" class="font-semibold"></p>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Extended Forecast -->
-            <div id="forecast-container" class="bg-white rounded-lg shadow-lg p-6 hidden">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">5-Day Forecast</h2>
-                <div id="forecast" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
-                    <!-- Forecast items will be populated here -->
-                </div>
-            </div>
-        </div>
-    
-        <script src="app.js"></script>
-    </body>
-    </html>
-        <header>
-            <h1>Weather Forecast</h1>
-            <p>Get accurate weather information for any location</p>
+<body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-800">Weather Forecast</h1>
+            <p class="text-gray-600">Get accurate weather information for any location</p>
         </header>
 
         <!-- Search Section -->
-        <div>
-            <div>
-                <div>
-                    <input type="text" id="search-input" placeholder="Enter city name...">
-                    <div id="search-dropdown">
-                        <!-- Dropdown items -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="relative flex-grow">
+                    <input type="text" id="search-input" placeholder="Enter city name..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <div id="search-dropdown" class="hidden absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-10 max-h-60 overflow-y-auto">
+                        <!-- Dropdown items  -->
                     </div>
                 </div>
-                <button id="search-button">Search</button>
-                <button id="location-button">Current Location</button>
+                <button id="search-button" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition duration-300">
+                    Search
+                </button>
+                <button id="location-button" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition duration-300">
+                    <i class="fas fa-location-dot mr-2"></i>Current Location
+                </button>
             </div>
-            <div id="error-message"></div>
+            <div id="error-message" class="text-red-500 mt-2 hidden"></div>
         </div>
 
         <!-- Current Weather -->
-        <div id="current-weather">
-            <div>
-                <div>
-                    <h2 id="city-name"></h2>
-                    <p id="current-date"></p>
-                    <div>
-                        <p id="weather-description"></p>
+        <div id="current-weather" class="bg-white rounded-lg shadow-lg p-6 mb-6 hidden">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="flex-1">
+                    <h2 id="city-name" class="text-2xl font-semibold text-gray-800"></h2>
+                    <p id="current-date" class="text-gray-500"></p>
+                    <div class="mt-4">
+                        <div class="flex items-center">
+                            <span id="current-temp" class="text-5xl font-bold text-gray-800"></span>
+                            <span class="text-2xl text-gray-600 ml-2">°C</span>
+                        </div>
+                        <p id="weather-description" class="text-gray-600 mt-1 capitalize"></p>
                     </div>
                 </div>
-                <div>
-                    <img id="weather-icon" src="" alt="Weather Icon">
+                <div class="weather-icon text-center">
+                    <img id="weather-icon" src="" alt="Weather Icon" class="w-24 h-24">
                 </div>
             </div>
-            <div>
-                <div>
-                    <p></p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+                <div class="bg-blue-50 p-3 rounded-lg">
+                    <p class="text-gray-500"><i class="fas fa-wind mr-2"></i>Wind</p>
+                    <p id="wind-speed" class="font-semibold"></p>
                 </div>
-                <div>
-                    <p></p>
+                <div class="bg-blue-50 p-3 rounded-lg">
+                    <p class="text-gray-500"><i class="fas fa-droplet mr-2"></i>Humidity</p>
+                    <p id="humidity" class="font-semibold"></p>
                 </div>
-                <div>
-                    <p ></p>
+                <div class="bg-blue-50 p-3 rounded-lg">
+                    <p class="text-gray-500"><i class="fas fa-temperature-half mr-2"></i>Feels Like</p>
+                    <p id="feels-like" class="font-semibold"></p>
                 </div>
             </div>
         </div>
 
         <!-- Extended Forecast -->
-        <div id="forecast-container" >
-            <h2 >5-Day Forecast</h2>
-            <div id="forecast">
-                <!-- Forecast item -->
+        <div id="forecast-container" class="bg-white rounded-lg shadow-lg p-6 hidden">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">5-Day Forecast</h2>
+            <div id="forecast" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+                <!-- Forecast items -->
             </div>
         </div>
     </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
